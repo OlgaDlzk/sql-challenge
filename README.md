@@ -4,7 +4,7 @@ The task is to do a research project about people whom the company employed duri
 
 Using provided CSV files, we created tables in a SQL database and imported the CSV files. 
 
-The questions that need to ber answered with our queries:
+The questions that need to be answered with our queries:
 
     1. List the employee number, last name, first name, sex, and salary of each employee.
 
