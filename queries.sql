@@ -43,6 +43,7 @@ WHERE first_name = 'Hercules' AND  last_name LIKE 'B%';
 
 -- Sixth query
 
+CREATE VIEW sales_dep_employees AS
 SELECT emp_no, last_name, first_name 
 FROM employees
 WHERE emp_no IN
@@ -69,7 +70,7 @@ WHERE dept_name IN ('Sales', 'Development');
 
 -- Eight query
 
-SELECT last_name, COUNT(last_name) AS "last name count"
+SELECT last_name, COUNT(last_name) AS "last_name_count"
 FROM employees 
 GROUP BY last_name
-ORDER BY "last name count" DESC;
+ORDER BY "last_name_count" DESC;
