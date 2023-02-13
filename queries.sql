@@ -16,7 +16,7 @@ WHERE hire_date LIKE '%1986%';
 
 -- Third query
 
-SELECT e.emp_no, e.first_name, e.last_name, d.dept_no, de.dept_name
+SELECT e.emp_no, e.first_name, e.last_name, d.dept_no, de.dept_name AS department_name
 FROM employees e
 JOIN dept_manager d
 ON (e.emp_no = d.emp_no)
@@ -25,7 +25,7 @@ ON (e.emp_no = d.emp_no)
   
 -- Fourth query
 
-SELECT e.emp_no, e.first_name, e.last_name, d.dept_no, de.dept_name
+SELECT e.emp_no, e.first_name, e.last_name, d.dept_no, de.dept_name AS department_name
 FROM employees e
 JOIN dept_emp d
 ON (e.emp_no = d.emp_no)
@@ -59,3 +59,17 @@ WHERE emp_no IN
 
 -- Seventh query
 
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name AS department_name
+FROM employees e
+LEFT JOIN dept_emp de
+ON e.emp_no = de.emp_no
+LEFT JOIN departments d
+ON d.dept_no = de.dept_no
+WHERE dept_name IN ('Sales', 'Development');
+
+-- Eight query
+
+SELECT last_name, COUNT(last_name) AS "last name count"
+FROM employees 
+GROUP BY last_name
+ORDER BY "last name count" DESC;
