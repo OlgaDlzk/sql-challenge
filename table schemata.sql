@@ -5,7 +5,7 @@ CREATE TABLE titles (
   title VARCHAR(200) NOT NULL
   );
   
--- Drop tables
+-- Drop tables when needed
 DROP TABLE salaries;
 
 CREATE TABLE departments (
@@ -45,7 +45,7 @@ CREATE TABLE salaries (
   );
   
   
--- Query all fields from the table titles
+-- Query all fields from the table dept_manager
 SELECT *
 FROM dept_manager;
 
